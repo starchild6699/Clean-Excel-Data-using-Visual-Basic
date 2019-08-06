@@ -1,0 +1,47 @@
+Sub Main()
+' deleted Duplicate Declerations
+' Corrected Row numbers 
+' Deleted End from 
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 15).Value = "Windows 10 Home" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 15).Value = "MAR Windows 10 Pro" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 17).Value = "IT Team" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 17).Value = "Ebay Sales" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 17).Value = "Retail Sales" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+
+
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 17).Value = "FBA" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+
+
+End Sub
