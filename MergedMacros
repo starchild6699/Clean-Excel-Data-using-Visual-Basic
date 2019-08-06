@@ -1,0 +1,218 @@
+Sub Main()
+
+Sub Delete_Win10_Home()
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 13).Value = "Windows 10 Home" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+    End
+End Sub
+
+Sub Delete_Win10_Pro()
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 13).Value = "Windows 10 Pro" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+    End
+End Sub
+
+Sub Delete_IT()
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 14).Value = "IT Team" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+    End
+End Sub
+
+Sub Delete_EbaySales()
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 14).Value = "Ebay Sales" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+    End
+End Sub
+
+Sub Delete_RetailSales()
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 14).Value = "Retail Sales" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+    End
+End Sub
+
+Sub Delete_FBA()
+
+
+    Dim lRow As Long
+    Dim iCntr As Long
+    lRow = 30000
+    For iCntr = lRow To 1 Step -1
+        If Cells(iCntr, 14).Value = "FBA" Then
+            Rows(iCntr).Delete
+        End If
+    Next
+    End
+End Sub
+
+Sub Lists()
+'
+' Lists Macro
+'
+' Keyboard Shortcut: Ctrl+l
+'
+    Cells.Select
+    Selection.Copy
+    Sheets.Add After:=ActiveSheet
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Sheets("Sheet").Select
+    Application.CutCopyMode = False
+    ActiveWindow.SelectedSheets.Delete
+    Columns("M:O").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("A:A").Select
+    Columns("A:A").EntireColumn.AutoFit
+    Columns("B:B").Select
+    Columns("B:B").EntireColumn.AutoFit
+    Columns("C:C").Select
+    Columns("C:C").EntireColumn.AutoFit
+    Columns("D:D").Select
+    Columns("D:D").EntireColumn.AutoFit
+    Columns("E:E").Select
+    Columns("E:E").EntireColumn.AutoFit
+    Columns("F:F").Select
+    Columns("F:F").EntireColumn.AutoFit
+    Columns("G:G").Select
+    Columns("G:G").EntireColumn.AutoFit
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "Price"
+    Columns("G:G").Select
+    Columns("G:G").EntireColumn.AutoFit
+    Range("I1").Select
+    ActiveCell.FormulaR1C1 = "Warehouse"
+    Columns("I:I").Select
+    Columns("I:I").EntireColumn.AutoFit
+    ActiveWindow.ScrollColumn = 2
+    ActiveWindow.ScrollColumn = 3
+    Columns("L:L").Select
+    Selection.Cut
+    Columns("H:H").Select
+    Selection.Insert Shift:=xlToRight
+    Columns("L:L").Select
+    Selection.TextToColumns Destination:=Range("L1"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=False, _
+        Semicolon:=True, Comma:=False, Space:=False, Other:=False, FieldInfo _
+        :=Array(Array(1, 1), Array(2, 1), Array(3, 1), Array(4, 1), Array(5, 1), Array(6, 1), _
+        Array(7, 1), Array(8, 1)), TrailingMinusNumbers:=True
+    Range("L1").Select
+    ActiveCell.FormulaR1C1 = "Configuration"
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "Hard Drive"
+    Range("N1").Select
+    ActiveCell.FormulaR1C1 = "RAM"
+    Range("O1").Select
+    ActiveCell.FormulaR1C1 = "Optical"
+    Range("P1").Select
+    ActiveCell.FormulaR1C1 = "Screen Size"
+    Columns("Q:T").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("L:P").Select
+    Range("P1").Activate
+    Selection.Cut
+    Columns("H:H").Select
+    Selection.Insert Shift:=xlToRight
+    Columns("H:H").Select
+    Columns("F:F").ColumnWidth = 29.86
+    Columns("F:F").ColumnWidth = 33.57
+    Columns("H:H").Select
+    Columns("H:H").EntireColumn.AutoFit
+    Selection.ColumnWidth = 37.57
+    Columns("I:I").Select
+    Columns("I:I").EntireColumn.AutoFit
+    Selection.ColumnWidth = 17.71
+    Columns("J:J").Select
+    Columns("J:J").EntireColumn.AutoFit
+    Selection.ColumnWidth = 13.86
+    Columns("K:K").Select
+    Columns("K:K").EntireColumn.AutoFit
+    ActiveWindow.ScrollColumn = 6
+    ActiveWindow.ScrollColumn = 7
+    ActiveWindow.ScrollColumn = 8
+    ActiveWindow.ScrollColumn = 9
+    ActiveWindow.ScrollColumn = 8
+    ActiveWindow.ScrollColumn = 9
+    Columns("M:M").Select
+    Columns("M:M").EntireColumn.AutoFit
+    Selection.ColumnWidth = 29.14
+    ActiveWindow.ScrollColumn = 8
+    ActiveWindow.ScrollColumn = 7
+    ActiveWindow.ScrollColumn = 6
+    ActiveWindow.ScrollColumn = 5
+    ActiveWindow.ScrollColumn = 6
+    ActiveWindow.ScrollColumn = 5
+    ActiveWindow.ScrollColumn = 4
+    ActiveWindow.ScrollColumn = 3
+    ActiveWindow.ScrollColumn = 2
+    ActiveWindow.ScrollColumn = 1
+    Columns("G:G").Select
+    Selection.NumberFormat = "$#,##0.00"
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .Color = 65535
+        .TintAndShade = 0
+        .PatternTintAndShade = 0
+    End With
+    Rows("1:1").Select
+    With Selection.Interior
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.249977111117893
+        .PatternTintAndShade = 0
+    End With
+    ActiveWindow.ScrollColumn = 2
+    ActiveWindow.ScrollColumn = 3
+    ActiveWindow.ScrollColumn = 4
+    ActiveWindow.ScrollColumn = 5
+    ActiveWindow.ScrollColumn = 6
+    ActiveWindow.ScrollColumn = 7
+    ActiveWindow.ScrollColumn = 8
+    ActiveWindow.ScrollColumn = 9
+    ActiveWindow.ScrollColumn = 8
+    ActiveWindow.ScrollColumn = 7
+    ActiveWindow.ScrollColumn = 6
+    ActiveWindow.ScrollColumn = 5
+    ActiveWindow.ScrollColumn = 4
+    ActiveWindow.ScrollColumn = 3
+    ActiveWindow.ScrollColumn = 2
+    ActiveWindow.ScrollColumn = 1
+
+End Sub
+
+End Sub
+
