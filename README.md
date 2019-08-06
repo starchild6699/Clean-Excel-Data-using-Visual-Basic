@@ -1,5 +1,5 @@
 # Clean-Excel-Data-using-Visual-Basic
-Clean data that has been exported into Excel to remove rows based on column values
+
 The purpose of this project is to remove rows based on column value. Currently, inventory data is exported from a custom app into Excel.  In Excel, the data is manually filtered by searching aand deleting, running a recorded Macro and then more manual searching and deleting.  The goal is to write Visual Basic code that can combine the exising manual searches and deletions with the existing recorded Macro.
 
 Requirements:
@@ -170,6 +170,8 @@ Sub Lists()
     ActiveWindow.ScrollColumn = 3
     ActiveWindow.ScrollColumn = 2
     ActiveWindow.ScrollColumn = 1
+End 
+
 End Sub
 
 Three Macros that I have written and validated as working are below
